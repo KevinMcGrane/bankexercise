@@ -108,9 +108,9 @@ public class CreateBankDialog extends JFrame {
 		
 		add(dataPanel, BorderLayout.CENTER);
 		
-		JPanel buttonPanel = new JPanel(new FlowLayout());
-		JButton addButton = new JButton("Add");
-		JButton cancelButton = new JButton("Cancel");
+		final JPanel buttonPanel = new JPanel(new FlowLayout());
+		final JButton addButton = new JButton("Add");
+		final JButton cancelButton = new JButton("Cancel");
 		
 		buttonPanel.add(addButton);
 		buttonPanel.add(cancelButton);
@@ -122,15 +122,15 @@ public class CreateBankDialog extends JFrame {
 				
 				
 				
-				String accountNumber = accountNumberTextField.getText();
+				final String accountNumber = accountNumberTextField.getText();
 				
 				
 							
 				
-				String surname = surnameTextField.getText();
-				String firstName = firstNameTextField.getText();
+				final String surname = surnameTextField.getText();
+				final String firstName = firstNameTextField.getText();
 			
-				String accountType = comboBox.getSelectedItem().toString();
+				final String accountType = comboBox.getSelectedItem().toString();
 				
 			
 		
@@ -160,10 +160,10 @@ public class CreateBankDialog extends JFrame {
 						if(!accNumTaken){
 						
 						
-							BankAccount account = new BankAccount(randNumber, accountNumber, surname, firstName, accountType, 0.0, 0.0);
+							final BankAccount account = new BankAccount(randNumber, accountNumber, surname, firstName, accountType, 0.0, 0.0);
 						
 							
-							int key = Integer.parseInt(account.getAccountNumber());
+							final int key = Integer.parseInt(account.getAccountNumber());
 							
 							int hash = (key%TABLE_SIZE);
 							
