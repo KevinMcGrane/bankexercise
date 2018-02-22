@@ -10,9 +10,7 @@ public class CreateBankDialog extends JFrame {
 
 	
 	private final static int TABLE_SIZE = 29;
-	Random rand = new Random();
-	
-	ArrayList<BankAccount> accountList;
+	private Random rand = new Random();
 
 	HashMap<Integer, BankAccount> table = new HashMap<Integer, BankAccount>();
 	
