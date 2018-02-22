@@ -40,7 +40,7 @@ public class CreateBankDialog extends JFrame {
 		
 		String[] comboTypes = {"Current", "Deposit"};
 		
-		final JComboBox comboBox = new JComboBox(comboTypes);
+		final JComboBox<String> comboBox = new JComboBox<String>(comboTypes);
 		
 		accountNumberLabel = new JLabel("Account Number: ");
 		accountNumberTextField = new JTextField(15);
