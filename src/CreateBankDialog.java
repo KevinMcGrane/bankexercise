@@ -32,7 +32,7 @@ public class CreateBankDialog extends JFrame {
 	
 	CreateBankDialog(HashMap<Integer, BankAccount> table) {
 		
-		super("Add Bank Details");
+		super("Add Bank Details"); 
 		
 		setLayout(new BorderLayout());
 		
