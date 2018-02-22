@@ -16,21 +16,21 @@ public class BankApplication extends JFrame {
 	private final static int TABLE_SIZE = 29;
 
 	
-	JMenuBar menuBar;
-	JMenu navigateMenu, recordsMenu, transactionsMenu, fileMenu, exitMenu;
-	JMenuItem nextItem, prevItem, firstItem, lastItem, findByAccount, findBySurname, listAll;
-	JMenuItem createItem, modifyItem, deleteItem, setOverdraft, setInterest;
-	JMenuItem deposit, withdraw, calcInterest;
-	JMenuItem open, save, saveAs;
-	JMenuItem closeApp;
-	JButton firstItemButton, lastItemButton, nextItemButton, prevItemButton;
-	JLabel accountIDLabel, accountNumberLabel, firstNameLabel, surnameLabel, accountTypeLabel, balanceLabel, overdraftLabel;
-	JTextField accountIDTextField, accountNumberTextField, firstNameTextField, surnameTextField, accountTypeTextField, balanceTextField, overdraftTextField;
+	private JMenuBar menuBar;
+	private JMenu navigateMenu, recordsMenu, transactionsMenu, fileMenu, exitMenu;
+	private JMenuItem nextItem, prevItem, firstItem, lastItem, findByAccount, findBySurname, listAll;
+	private JMenuItem createItem, modifyItem, deleteItem, setOverdraft, setInterest;
+	private JMenuItem deposit, withdraw, calcInterest;
+	private JMenuItem open, save, saveAs;
+	private JMenuItem closeApp;
+	private JButton firstItemButton, lastItemButton, nextItemButton, prevItemButton;
+	private JLabel accountIDLabel, accountNumberLabel, firstNameLabel, surnameLabel, accountTypeLabel, balanceLabel, overdraftLabel;
+	private JTextField accountIDTextField, accountNumberTextField, firstNameTextField, surnameTextField, accountTypeTextField, balanceTextField, overdraftTextField;
 	static JFileChooser fc;
-	JTable jTable;
-	double interestRate;
+	private JTable jTable;
+	private double interestRate;
 	
-	int currentItem = 0;
+	private int currentItem;
 	
 	
 	boolean openValues;
@@ -39,7 +39,7 @@ public class BankApplication extends JFrame {
 		
 		super("Bank Application");
 		
-		int currentItem;
+		
 		initComponents();
 	}
 	
