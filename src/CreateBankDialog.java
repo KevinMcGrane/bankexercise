@@ -135,8 +135,16 @@ public class CreateBankDialog extends JFrame {
 									accountType, 0.0, 0.0);
 
 							final int key = Integer.parseInt(account.getAccountNumber());
+							
+							int hash = (key%TABLE_SIZE);
+							
+							
+							while(table.containsKey(hash)){
+						
+								hash = hash+1;
+							}
 
-							table.put(key, account);
+							table.put(hash, account);
 						} else {
 							JOptionPane.showMessageDialog(null, "Account Number must be unique");
 						}
