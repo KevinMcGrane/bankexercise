@@ -203,10 +203,7 @@ public class BankApplication extends JFrame {
 				
 				saveOpenValues();
 				
-				currentItem=0;
-				while(!table.containsKey(currentItem)){
-					currentItem++;
-				}
+				firstItem();
 				displayDetails(currentItem);
 			}
 		};
@@ -314,10 +311,7 @@ public class BankApplication extends JFrame {
 							JOptionPane.showMessageDialog(null, "Account Deleted");
 							
 
-							currentItem=0;
-							while(!table.containsKey(currentItem)){
-								currentItem++;
-							}
+							firstItem();
 							displayDetails(currentItem);
 							
 			}
@@ -383,10 +377,7 @@ public class BankApplication extends JFrame {
 		open.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
 				readFile();
-				currentItem=0;
-				while(!table.containsKey(currentItem)){
-					currentItem++;
-				}
+				firstItem();
 				displayDetails(currentItem);
 			}
 		});
@@ -773,6 +764,17 @@ public static void saveToFile(){
 		table.put(hash, value);
 
 	}
+	
+	private void firstItem()
+	 	{		
+	 		currentItem = 0;
+	 		
+	 		if (table.get(currentItem) == null && !table.isEmpty()) {
+	 			while (!table.containsKey(currentItem)) {
+	 				currentItem++;
+	 		}
+	 	}	
+	 }
 	
 	public static void main(String[] args) {
 		BankApplication ba = new BankApplication();
