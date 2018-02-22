@@ -13,8 +13,12 @@ public class CreateBankDialog extends JFrame {
 
 	private HashMap<Integer, BankAccount> table = new HashMap<Integer, BankAccount>();
 
-	public void put(int hash, BankAccount value) {
-		
+	public void put(int key, BankAccount value) {
+		int hash = (key % TABLE_SIZE);
+
+		while (table.containsKey(key)) {
+			hash = hash + 1;
+		}
 		table.put(hash, value);
 	}
 
@@ -132,12 +136,7 @@ public class CreateBankDialog extends JFrame {
 
 							final int key = Integer.parseInt(account.getAccountNumber());
 
-							int hash = (key % TABLE_SIZE);
-
-							while (table.containsKey(hash)) {
-								hash = hash + 1;
-							}
-							table.put(hash, account);
+							table.put(key, account);
 						} else {
 							JOptionPane.showMessageDialog(null, "Account Number must be unique");
 						}
