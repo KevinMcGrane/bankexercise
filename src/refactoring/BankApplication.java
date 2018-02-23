@@ -12,18 +12,17 @@ import net.miginfocom.swing.MigLayout;
 @SuppressWarnings("serial")
 public class BankApplication extends JFrame {
 
-	ArrayList<BankAccount> accountList = new ArrayList<BankAccount>();
 	static HashMap<Integer, BankAccount> table = new HashMap<Integer, BankAccount>();
 	final static int TABLE_SIZE = 29;
 
-	NavigateM navigate = new NavigateM();
-	RecordM record = new RecordM();
-	TransactionM transaction = new TransactionM();
-	FileM file = new FileM();
+	private NavigateM navigate = new NavigateM();
+	private RecordM record = new RecordM();
+	private TransactionM transaction = new TransactionM();
+	private FileM file = new FileM();
 
-	JMenuBar menuBar;
-	JMenu exitMenu;
-	JMenuItem closeApp;
+	private JMenuBar menuBar;
+	private JMenu exitMenu;
+	private JMenuItem closeApp;
 
 	private JLabel accountIDLabel, accountNumberLabel, firstNameLabel, surnameLabel, accountTypeLabel, balanceLabel,
 			overdraftLabel;
