@@ -1,3 +1,5 @@
+package refactoring;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -6,6 +8,7 @@ import javax.swing.*;
 
 import net.miginfocom.swing.MigLayout;
 
+@SuppressWarnings("serial")
 public class CreateBankDialog extends JFrame {
 
 	private final static int TABLE_SIZE = 29;
@@ -135,13 +138,12 @@ public class CreateBankDialog extends JFrame {
 									accountType, 0.0, 0.0);
 
 							final int key = Integer.parseInt(account.getAccountNumber());
-							
-							int hash = (key%TABLE_SIZE);
-							
-							
-							while(table.containsKey(hash)){
-						
-								hash = hash+1;
+
+							int hash = (key % TABLE_SIZE);
+
+							while (table.containsKey(hash)) {
+
+								hash = hash + 1;
 							}
 
 							table.put(hash, account);
